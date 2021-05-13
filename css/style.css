@@ -1,0 +1,401 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    /* font-family: 'Girassol', cursive; */
+    font-family: 'PT Sans', sans-serif;
+}
+
+body {
+    min-height: 100%;
+    max-width: 70vw;
+    background-color: white;
+    margin: auto;
+}
+
+p {
+    font-size: 0.8em;
+    color: rgb(48, 48, 48);
+}
+
+.mainHeader {
+    width: 100%;
+}
+
+.brandName {
+    font-family: 'Girassol', cursive;
+    text-align: center;
+    font-size: 5.5em;
+}
+
+section {
+    width: 100%;
+    height: auto;
+    background-color: rgb(230, 230, 230);
+    margin: auto;
+    margin-bottom: 6vh;
+    border-top: 5px solid grey;
+    border-bottom: 5px solid grey;
+}
+
+.welcomeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2.8rem 5rem 4rem 5rem;
+    background-image: url(../imgs/banner-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profilePic {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 2vh;
+}
+
+.profilePic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.welcomeText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.welcomeText h3 {
+    margin-bottom: 1vh;
+}
+
+.welcomeText p {
+    color: white;
+}
+
+.contactBtn {
+    margin-top: 3.5vh;
+    padding: 1vh 1vw;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: 150ms;
+    color: white;
+    background-color: black;
+}
+
+.contactBtn:hover {
+    background-color: rgb(58, 97, 58);
+    color: white;
+    transform: scale(1.1);
+    font-weight: normal;
+}
+
+.sectionTitle {
+    width: 100%;
+    text-align: center;
+    padding: 1.8vh 0;
+    margin: 1.5vh 0;
+}
+
+.sectionTitle h1 {
+    font-size: 2.5em;
+}
+
+.skillsSection {
+    background-color: rgb(236, 236, 236);
+    margin-bottom: 0;
+}
+
+.skillsContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 1vh 1vw 9vh 1vw;
+    margin-top: 2vh;
+}
+
+.skills {
+    width: 93%;
+    height: fit-content;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 0px 1px gray;
+}
+
+.skills h3 {
+    background-color: rgb(58, 97, 58);
+    padding: 0.8vh 0.8vw;
+    color: whitesmoke;
+}
+
+.skillsText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-height: 100%;
+    padding: 3vh 2vw;
+}
+
+.skillsText a {
+    text-decoration: underline;
+    color: black;
+    margin-top: 1vh;
+}
+
+.skillsText a:hover {
+    color: green;
+}
+
+.section1, .section2, .section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill2 {
+    margin-bottom: 6vh;
+}
+
+.note {
+    padding: 4vh 13vw;
+    text-align: center;
+}
+
+.worksSection {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.wildlife {
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+
+.workLabel {
+    width: 50%;
+    text-align: center;
+    padding: 3vh 3vw;
+    margin: auto;
+}
+
+.imgsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 0;
+    justify-items: stretch;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.samplePhoto {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+    transition: transform 300ms ease-in-out;
+    object-fit: cover;
+}
+
+.samplePhoto:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 15px black;
+}
+
+.landscape {
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+
+.worksSection h2 {
+    color: rgb(45, 104, 45);
+    margin-bottom: 2vh;
+}
+
+.social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh auto;
+}
+
+.social i {
+    font-size: 2em;
+    margin: 0 1vw;
+    color: black;
+    transition-duration: 150ms;
+}
+
+.social i:hover {
+    color: rgb(78, 110, 13);
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.89);
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease-out;
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modalText {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 6%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.modal img {
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.5);
+    transition: 200ms ease-out;
+}
+
+.modal img.open {
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.mainFooter {
+    width: 100%;
+    text-align: center;
+    border-top: 5px solid grey;
+}
+
+.mainFooter p {
+    width: 60%;
+    text-align: center;
+    margin: 3vh auto;
+}
+
+@media (max-width:768px) {
+    body {
+        max-width: 100%;
+    }
+
+    .brandName {
+        font-size: 4em;
+    }
+
+    .welcomeSection {
+        padding: 3em;
+        align-items: center;
+    }
+
+    .profilePic img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .welcomeText {
+        width: 100%;
+    }
+
+    .skillsContainer {
+        flex-direction: column;
+        width: 85%;
+        margin: auto;
+    }
+
+    .skills {
+        width: 80%;
+        margin-bottom: 2vh;
+    }
+
+    .skill2 {
+        margin-bottom: 2vh;
+    }
+
+    .note {
+        font-size: 0.9em;
+        padding: 1em;
+    }
+
+    .worksSection {
+        height: auto;
+    }
+
+    .wildlife {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landscape {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .imgsGrid {
+        width: 100%;
+    }
+
+    .workLabel {
+        width: 100%;
+    }
+
+    .modal img {
+        width: 90%;
+        height: 50%;
+    }
+
+    .modalText {
+        bottom: 13%;
+    }
+
+    .social {
+        margin: 3.5vh auto;
+    }
+
+    .social i {
+        margin: 0 3.5vw;
+    }
+
+    .mainFooter p {
+        width: 80%;
+        text-align: center;
+        margin: 2vh auto;
+        font-size: 0.7em;
+    }
+}
